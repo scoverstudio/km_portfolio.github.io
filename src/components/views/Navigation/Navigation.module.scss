@@ -1,0 +1,61 @@
+.navigation {
+  background-color: transparent;
+
+  .logo {
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #a5c9ca;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-left: 10px;
+
+    .link {
+      position: relative;
+      color: white;
+      letter-spacing: 1px;
+      font-size: 18px;
+      font-weight: 500;
+      overflow: hidden;
+      background: linear-gradient(to right, #a5c9ca, #a5c9ca 50%, white 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 275ms ease;
+
+      &:hover {
+        background-position: 0 100%;
+      }
+
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+  i:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: white;
+    background: linear-gradient(to top, #a5c9ca, #a5c9ca 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    transition: 275ms ease;
+
+    &:hover {
+      transform: scale(110%) translateY(-10%);
+      background-position: 0 100%;
+    }
+  }
+}
