@@ -1,0 +1,130 @@
+@import "../../../styles/settings.scss";
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 15px;
+
+  .headerText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    color: white;
+
+    h1 {
+      font-size: 45px;
+    }
+
+    p {
+      font-size: 50px;
+      margin-bottom: 10px;
+
+      span {
+        color: $secondColor;
+      }
+    }
+    .prof {
+      text-transform: uppercase;
+      font-size: 35px;
+      margin-bottom: 0;
+    }
+
+    .tools {
+      font-family: "Dancing Script", cursive;
+      font-size: 22px;
+      margin-left: 160px;
+      color: rgb(163, 157, 157);
+    }
+  }
+
+  .photoContainer {
+    position: relative;
+    text-align: right;
+    width: 30%;
+
+    .box {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+
+      .circle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 350px;
+        height: 350px;
+        background-color: #a5c9ca;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 6px solid #000;
+
+        img {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 450px;
+        }
+      }
+
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 44%;
+        transform: translateX(-50%);
+        height: 450px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 350px;
+        height: 350px;
+        background-color: transparent;
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: 0 100px 0 40px #2c3333;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 350px;
+        width: 350px;
+        border-radius: 50%;
+        border: 6px solid black;
+        border-top: 6px solid transparent;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .headerContainer {
+    .headerText {
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 40px;
+        margin-bottom: 10px;
+
+        span {
+          color: $secondColor;
+        }
+      }
+      .prof {
+        text-transform: uppercase;
+        font-size: 30px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
