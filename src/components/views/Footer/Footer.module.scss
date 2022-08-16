@@ -1,0 +1,39 @@
+@import "../../../styles/settings.scss";
+
+.footer {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: $textColor;
+  padding: 10px;
+  background-color: rgba($color: #424d4d, $alpha: 0.5);
+
+  span {
+    width: 100%;
+    text-align: center;
+
+    a {
+      color: $textColor;
+      img {
+        width: 75px;
+        margin-left: 5px;
+      }
+
+      i {
+        font-size: 15px;
+        border-radius: 50%;
+        transition: 0.2s;
+
+        &:hover {
+          transform: scale(110%);
+        }
+      }
+      i:last-child {
+        margin-left: 15px;
+      }
+    }
+  }
+}

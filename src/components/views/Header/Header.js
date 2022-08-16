@@ -4,11 +4,14 @@ import clsx from "clsx";
 
 const Header = () => {
   return (
-    <Container fluid="lg" className={clsx("", styles.headerContainer)}>
+    <Container
+      fluid="lg"
+      className={clsx("px-0 d-flex flex-column flex-md-row", styles.headerContainer)}
+    >
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-      <section className={styles.headerText}>
+      <section className={clsx("", styles.headerText)}>
         <h1>Hello!</h1>
         <p className="responsive-font-example">
           I'm <span>Krystian Matkowski</span>
