@@ -28,7 +28,7 @@ const Navigation = () => {
       )}
     >
       <Container className="container-fluid">
-        <Navbar.Brand href="#home" className={styles.logo}>
+        <Navbar.Brand href="/" className={styles.logo}>
           KM
         </Navbar.Brand>
         <Navbar.Toggle
@@ -38,25 +38,25 @@ const Navigation = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Item className={styles.item}>
-              <Nav.Link className={styles.link} href="/home">
+              <Nav.Link className={styles.link} href="/">
                 <i className="fa fa-home" aria-hidden="true"></i>
                 <span>Home</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className={styles.item}>
-              <Nav.Link className={styles.link}>
+              <Nav.Link className={styles.link} href="/portfolio">
                 <i className="fas fa-brain"></i>
                 <span>Portfolio</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className={styles.item}>
-              <Nav.Link className={styles.link}>
-                <i className="fas fa-portrait    "></i>
+              <Nav.Link className={styles.link} href="/about">
+                <i className="fas fa-portrait"></i>
                 <span>About</span>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item className={styles.item}>
-              <Nav.Link className={styles.link}>
+              <Nav.Link className={styles.link} href="/resume">
                 <i className="fas fa-file-contract"></i>
                 <span>Resume</span>
               </Nav.Link>

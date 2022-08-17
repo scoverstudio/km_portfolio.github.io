@@ -1,0 +1,214 @@
+@import "../../../styles/settings.scss";
+
+.portfolioContainer {
+  position: relative;
+
+  h1 {
+    color: $textColor;
+    text-align: center;
+    margin: 200px 0 100px;
+  }
+
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .singleCard {
+      position: relative;
+      width: 30%;
+      background-color: rgba($color: #1f2424, $alpha: 0.5);
+      color: $textColor;
+      margin-bottom: 50px;
+      box-shadow: 0px 0px 15px -5px $secondColor;
+      transition: 0.5s;
+
+      &:hover {
+        box-shadow: 0px 5px 15px 3px $secondColor;
+        transform: scale(101%);
+      }
+
+      .siteImage {
+        padding: 15px 20px;
+        border-radius: 25px;
+      }
+
+      @media (max-width: 1600px) {
+        width: 45%;
+      }
+
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+
+      .button {
+        margin: 15px;
+        width: calc(100% - 30px);
+        padding: 10px 20px;
+        background-color: $secondColor;
+        color: black;
+        border: none;
+
+        a {
+          color: black;
+          text-decoration: none;
+          font-weight: 600;
+        }
+      }
+
+      .itemGroup {
+        .singleItem {
+          display: flex;
+          background-color: transparent;
+          color: white;
+          border: none;
+          border-radius: 0;
+
+          i {
+            margin-right: 10px;
+            font-size: 8px;
+            line-height: 25px;
+          }
+
+          &:first-child {
+            border-top: solid 2px $secondColor;
+          }
+
+          &:last-child {
+            border-bottom: solid 2px $secondColor;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        span {
+          display: flex;
+          color: $secondColor;
+
+          i {
+            font-size: 4px;
+            line-height: 22px;
+            margin: 0 10px;
+            color: #5d7f80;
+          }
+
+          &:last-child {
+            i {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $textColor;
+    margin: 100px 0;
+    h2 {
+      text-transform: uppercase;
+
+      span {
+        color: $secondColor;
+      }
+    }
+
+    .moreLinks {
+      a {
+        color: $textColor;
+        i {
+          font-size: 100px;
+          border-radius: 50%;
+          transition: 0.2s;
+          margin-top: 25px;
+
+          &:hover {
+            transform: scale(110%);
+          }
+        }
+        i:last-child {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .portfolioContainer {
+    .cardsContainer {
+      display: flex;
+      transform: translateX(-200px);
+      --distance: -500px;
+      backdrop-filter: blur(8px);
+
+      .singleCard {
+        width: 45%;
+        filter: brightness(30%);
+        background-color: rgba($color: #1f2424, $alpha: 0.5);
+        backdrop-filter: blur(8px);
+        color: $textColor;
+        transition: 0.2s;
+        box-shadow: 0px 0px 24px -5px $secondColor;
+
+        $counter: 0;
+        $scale: 80%;
+        $move: -80px;
+        @for $i from 0 through 10 {
+          &:nth-child(#{$i}) {
+            transform: translateX($move)
+              translateY(-35px - $counter)
+              rotateY(-70deg)
+              rotateX(-10deg)
+              scale($scale);
+          }
+          $move: $move - 10px;
+          $scale: $scale + 2%;
+          $counter: $counter + 2;
+        }
+
+        &:hover {
+          transform: translateX(-80px) translateY(-100px) rotateY(-40deg)
+            rotateX(-10deg);
+          filter: blur(0px);
+        }
+
+        &:not(:first-child) {
+          margin-left: var(--distance);
+        }
+
+        .siteImage {
+          padding: 15px;
+          border-radius: 25px;
+        }
+      }
+
+      .singleCard.active {
+        background-color: rgba($color: #1f2424, $alpha: 0.9);
+        transform: translateX(100px) translateY(-35px) rotateY(0deg);
+        opacity: 100%;
+        filter: blur(0);
+        z-index: 1;
+        box-shadow: 0px 0px 24px -5px $secondColor;
+
+        $counter: 100;
+        @for $i from 0 through 10 {
+          &:nth-child(#{$i}) {
+            transform: translateX(1300px - $counter)
+              translateY(-35px)
+              rotateY(0deg);
+          }
+          $counter: $counter + 150 + $i * 5;
+        }
+      }
+    }
+  }
+}

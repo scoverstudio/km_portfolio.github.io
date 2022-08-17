@@ -21,7 +21,7 @@
 
     .link {
       position: relative;
-      color: white;
+      color: $textColor;
       letter-spacing: 1px;
       font-size: 18px;
       font-weight: 500;
@@ -54,7 +54,7 @@
     justify-content: center;
     align-items: center;
     font-size: 35px;
-    color: white;
+    color: $textColor;
     background: linear-gradient(
       to top,
       $secondColor,
