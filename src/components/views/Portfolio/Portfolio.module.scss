@@ -7,6 +7,10 @@
     color: $textColor;
     text-align: center;
     margin: 200px 0 100px;
+
+    @media (max-width: 1600px) {
+      margin: 100px 0 100px;
+    }
   }
 
   .cardsContainer {
@@ -166,7 +170,7 @@
           &:nth-child(#{$i}) {
             transform: translateX($move)
               translateY(-35px - $counter)
-              rotateY(-70deg)
+              rotateY(-60deg)
               rotateX(-10deg)
               scale($scale);
           }

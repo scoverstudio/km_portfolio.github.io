@@ -1,0 +1,16 @@
+.resumeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 26px;
+
+  button {
+    width: 20%;
+  }
+
+  .resumeImg {
+    text-align: center;
+    margin: 50px;
+  }
+}

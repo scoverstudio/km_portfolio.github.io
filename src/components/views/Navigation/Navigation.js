@@ -2,7 +2,7 @@ import clsx from "clsx";
 import styles from "./Navigation.module.scss";
 import Nav from "react-bootstrap/Nav";
 import { useEffect, useState } from "react";
-import { Container, Navbar, useAccordionButton } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 
 const Navigation = () => {
   const [bgNavbar, setBgNavbar] = useState(false);

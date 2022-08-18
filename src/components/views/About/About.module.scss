@@ -1,0 +1,207 @@
+@import "../../../styles/settings.scss";
+$transition-time: 1.5s;
+h2 {
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.about {
+  margin-top: 100px;
+  display: block;
+  h2 {
+    color: $textColor;
+    text-align: center;
+
+    span {
+      color: $secondColor;
+    }
+  }
+  .skillsContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    height: 400px;
+    margin-bottom: 50px;
+    margin-left: 75px;
+
+    @media (max-width: 768px) {
+      height: 600px;
+    }
+
+    @media (max-width: 450px) {
+      height: 1100px;
+    }
+
+    .card {
+      position: relative;
+      width: 20%;
+      height: fit-content;
+      text-align: center;
+      transition: ease all $transition-time;
+      perspective: 1200px;
+
+      @media (max-width: 1200px) {
+        width: 33.3%;
+      }
+
+      @media (max-width: 768px) {
+        width: 50%;
+      }
+
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+
+      &:hover {
+        .cover {
+          transform: rotateX(0deg) rotateY(-180deg);
+
+          &:before {
+            transform: translateZ(30px);
+          }
+
+          i {
+            transform: translateZ(30px);
+          }
+
+          span {
+            transform: translateZ(-60px) rotatey(-180deg);
+          }
+        }
+      }
+
+      i {
+        color: $secondColor;
+        text-align: center;
+        transform: translateZ(30px);
+      }
+      .cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        transform-style: preserve-3d;
+        transition: ease all $transition-time;
+        border-radius: 15px;
+        border: 5px solid $secondColor;
+
+        &:before {
+          content: "";
+          position: absolute;
+          //   border: 5px solid rgba(255, 255, 255, 0.5);
+          //   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+          top: 20px;
+          left: 20px;
+          right: 20px;
+          bottom: 20px;
+          z-index: 2;
+          transition: ease all $transition-time;
+          transform-style: preserve-3d;
+          transform: translateZ(0px);
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          z-index: 2;
+          transition: ease all 1.3s;
+          background: rgba($color: #374040, $alpha: 1);
+          border-radius: 15px;
+        }
+
+        .cardBack {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba($color: $mainColor, $alpha: 0.1);
+          transform-style: preserve-3d;
+          transition: ease all $transition-time;
+          transform: translateZ(-1px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            transform-style: preserve-3d;
+            transition: ease transform $transition-time, ease background 0.5s;
+            transform: translateZ(-30px) rotatey(-180deg);
+            // background: #374040;
+            border-bottom: 2px solid $secondColor;
+            border-radius: 5px;
+            font-weight: 200;
+            font-size: 1.3em;
+            color: white;
+            text-align: center;
+            outline: none;
+            text-decoration: none;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.education {
+  margin-bottom: 60px;
+  overflow: hidden;
+
+  h2 {
+    span {
+      //   text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $secondColor;
+    }
+  }
+  .imgGroup {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    height: 300px;
+
+    .imgContainer {
+      height: 150px;
+      width: 200px;
+      background-color: #374040;
+      line-height: 150px;
+      border-radius: 15px;
+      margin-right: 15px;
+      img {
+        width: 200px;
+        padding: 25px;
+      }
+    }
+  }
+}
+
+.aboutMeContainer {
+    overflow: hidden;
+  display: flex;
+  margin-bottom: 100px;
+  span {
+    color: $secondColor;
+  }
+  .aboutMeContent {
+    color: $textColor;
+
+    .hobbys {
+      h3 {
+        font-size: 18px;
+      }
+      p {
+        margin-left: 25px;
+      }
+    }
+  }
+
+  .imgAbout {
+    line-height: 420px;
+  }
+}

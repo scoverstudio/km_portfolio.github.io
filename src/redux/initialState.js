@@ -8,10 +8,10 @@ const initialState = {
         "SkateShop is a E-commerce fully responsive website where you can buy skate assortment. You can login to palce orders or add products to your favorite.",
       functionalities: [
         "Fully functional ordering system",
-        "Login Page with full login functionalities (sign up and sign in) with firebase authentication",
+        "Login Page with full login functionalities (sign up and sign in) with auth0 authentication",
         "mongoDB for real time database",
         "stores orders for logged in users",
-        "Responsive desing",
+        "Responsive design",
       ],
       technologies: [
         "React",
