@@ -61,7 +61,7 @@ const Navigation = () => {
                 <span>Resume</span>
               </Nav.Link>
             </Nav.Item>
-            <Nav.Link>
+            <Nav.Link href="https://github.com/scoverstudio">
               <i className="fa fa-github" aria-hidden="true" />
             </Nav.Link>
           </Nav>
