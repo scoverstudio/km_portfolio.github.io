@@ -56,6 +56,7 @@ const About = () => {
           </div>
         </div>
       </div>
+
       <div className={styles.education}>
         <h2>
           Education <span>source</span>
