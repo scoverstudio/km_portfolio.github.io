@@ -11,7 +11,7 @@ const Header = () => {
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-      <section className={clsx("", styles.headerText)}>
+      <section className={clsx("pt-4", styles.headerText)}>
         <h1>Hello!</h1>
         <p className="responsive-font-example">
           I'm <span>Krystian Matkowski</span>

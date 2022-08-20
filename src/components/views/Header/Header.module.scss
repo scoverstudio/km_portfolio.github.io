@@ -3,7 +3,7 @@
 .headerContainer {
   display: flex;
   justify-content: space-between;
-  padding: 0 15px 100px ;
+  padding: 50px 15px 100px;
   margin-top: $navHeight;
 
   .headerText {
@@ -37,12 +37,14 @@
       margin-left: 160px;
       color: rgb(163, 157, 157);
     }
+
   }
 
   .photoContainer {
     position: relative;
     text-align: right;
     width: 30%;
+    padding: 0;
 
     .box {
       width: 400px;
@@ -133,6 +135,7 @@
 @media (max-width: 768px) {
   .headerContainer {
     margin-top: 0;
+    padding-top: 0;
     .headerText {
       width: 100%;
       h1 {
