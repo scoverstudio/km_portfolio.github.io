@@ -98,6 +98,26 @@ const initialState = {
       technologies: ["Javascript", "HTML5", "CSS3", "Heroku"],
       status: "finished",
     },
+    {
+      siteName: "Professional Movie Editor Portfolio",
+      urlSite: "https://filip-szatkowski.netlify.app/",
+      imagePath: `${process.env.PUBLIC_URL}/images/filq.png`,
+      description: "Portfolio website designed for Professional movie editior.",
+      functionalities: [
+        "Find recent movies made by FILQ",
+        "Check views and likes",
+        "Sending mails with questions to creator",
+      ],
+      technologies: [
+        "REACT",
+        "HTML5",
+        "CSS3",
+        "Netlify",
+        "Youtube API",
+        "particles.js",
+      ],
+      status: "finished",
+    },
   ],
 };
 
