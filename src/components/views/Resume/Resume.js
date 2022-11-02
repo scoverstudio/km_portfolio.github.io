@@ -18,12 +18,12 @@ const Resume = () => {
       <div className={styles.resumeImg}>
         <img
           alt=""
-          src={`${process.env.PUBLIC_URL}/images/myRESUMECV.png`}
+          src={`${process.env.PUBLIC_URL}/images/Krystian Matkowski v2.png`}
         ></img>
       </div>
       <Button>
         <Link
-          to={`${process.env.PUBLIC_URL}/files/Minimalist-CV-Resume.pdf`}
+          to={`${process.env.PUBLIC_URL}/files/Krystian Matkowski v2.pdf`}
           target="_blank"
           download
           className={styles.cv}

@@ -3,16 +3,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 26px;
-  margin-bottom: 90px;
+  padding: 0;
+  height: 100vh;
 
   .cv {
     color: white;
     text-decoration: none;
+    height: 100vh;
   }
 
   button {
-    width: 200px
+    width: 200px;
   }
 
   .resumeImg {
@@ -20,7 +21,15 @@
     margin: 50px;
 
     img {
-      width: 100%;
+      width: 60%;
+
+      @media (max-width: 1400px) {
+        width: 60%;
+      }
+
+      @media (max-width: 900px) {
+        width: 100%;
+      }
     }
   }
 }
