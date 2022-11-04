@@ -3,8 +3,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0;
-  height: 100vh;
+  padding: 100px;
+  min-height: calc(100vh - 63px);
+
+  @media (max-width: 1200px) {
+    padding: 150px 0px;
+  }
+
+  @media (max-width: 720px) {
+    padding: 100px 0;
+    min-height: calc(100vh - 110px);
+  }
 
   .cv {
     color: white;
