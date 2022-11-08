@@ -6,53 +6,85 @@ const About = () => {
       <h2>
         Range of my <span>abilities</span>
       </h2>
+
       <div className={styles.skillsContainer}>
         <div className={styles.card}>
           <div className={styles.cover}>
-            <i class="fa fa-html5 fa-6x" aria-hidden="true"></i>
+            <span>HTML5</span>
             <div className={styles.cardBack}>
-              <span>HTML5</span>
+              <i class="fa fa-html5 fa-6x" aria-hidden="true"></i>
             </div>
           </div>
         </div>
         <div className={styles.card}>
           <div className={styles.cover}>
-            <i class="fa fa-css3 fa-6x" aria-hidden="true"></i>
+            <span>CSS3</span>
             <div className={styles.cardBack}>
-              <span>CSS3</span>
+              <i class="fa fa-css3 fa-6x" aria-hidden="true"></i>
             </div>
           </div>
         </div>
         <div className={styles.card}>
           <div className={styles.cover}>
-            <i class="fab fa-react fa-6x fa-fw"></i>
+            <span>REACT</span>
             <div className={styles.cardBack}>
-              <span>REACT</span>
+              <i class="fab fa-react fa-6x fa-fw"></i>
             </div>
           </div>
         </div>
         <div className={styles.card}>
           <div className={styles.cover}>
-            <i class="fab fa-js fa-6x"></i>
+            <span>Javascript</span>
             <div className={styles.cardBack}>
-              <span>Javascript</span>
+              <i class="fab fa-js fa-6x"></i>
             </div>
           </div>
         </div>
         <div className={styles.card}>
           <div className={styles.cover}>
-            <i class="fab fa-node fa-6x fa-fw"></i>
+            <span
+              style={{
+                width: "80%",
+              }}
+            >
+              JEST, Enzyme
+            </span>
             <div className={styles.cardBack}>
-              <span>Node.js</span>
+              <i class="fa fa-recycle fa-6x" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.card}>
+          <div className={styles.cover}>
+            <span>Node.js</span>
+            <div className={styles.cardBack}>
+              <i class="fab fa-node fa-6x fa-fw"></i>
             </div>
           </div>
         </div>
         <div className={styles.card}>
           <div className={styles.cover}>
-            <i class="fa fa-github fa-6x" aria-hidden="true"></i>
-            <div className={styles.cardBack}>
-              <span>github</span>
-            </div>
+            <span>Express.js</span>
+            <div className={styles.cardBack}></div>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.cover}>
+            <span>MongoDB</span>
+            <div className={styles.cardBack}></div>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.cover}>
+            <span>Websockets</span>
+            <div className={styles.cardBack}></div>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.cover}>
+            <span>Auth0</span>
+            <div className={styles.cardBack}></div>
           </div>
         </div>
       </div>

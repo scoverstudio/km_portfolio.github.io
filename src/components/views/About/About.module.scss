@@ -22,7 +22,6 @@ h2 {
     height: 400px;
     margin-bottom: 150px;
 
-
     @media (max-width: 450px) {
       height: 900px;
     }
@@ -63,16 +62,36 @@ h2 {
           }
 
           span {
-            transform: translateZ(-60px) rotatey(-180deg);
+            transform: translateZ(30px) rotatey(0deg);
           }
         }
       }
 
-      i {
+      p {
+        font-size: 1.3em;
+        width: 100%;
+        transform: translateZ(-30px);
+        margin: 0;
         color: $secondColor;
-        text-align: center;
-        transform: translateZ(30px);
       }
+
+      span {
+        transform-style: preserve-3d;
+        transition: ease transform $transition-time, ease background 0.5s;
+        transform: translateZ(30px) rotatey(0deg);
+        border-bottom: 2px solid $secondColor;
+        border-radius: 5px;
+        font-weight: 200;
+        font-size: 1.3em;
+        color: white;
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+        &:hover {
+          color: white;
+        }
+      }
+
       .cover {
         position: relative;
         display: flex;
@@ -88,8 +107,6 @@ h2 {
         &:before {
           content: "";
           position: absolute;
-          //   border: 5px solid rgba(255, 255, 255, 0.5);
-          //   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
           top: 20px;
           left: 20px;
           right: 20px;
@@ -125,22 +142,10 @@ h2 {
           align-items: center;
           justify-content: center;
 
-          span {
-            transform-style: preserve-3d;
-            transition: ease transform $transition-time, ease background 0.5s;
-            transform: translateZ(-30px) rotatey(-180deg);
-            // background: #374040;
-            border-bottom: 2px solid $secondColor;
-            border-radius: 5px;
-            font-weight: 200;
-            font-size: 1.3em;
-            color: white;
+          i {
+            color: $secondColor;
             text-align: center;
-            outline: none;
-            text-decoration: none;
-            &:hover {
-              color: white;
-            }
+            transform: translateZ(-30px) rotatey(-180deg);
           }
         }
       }
