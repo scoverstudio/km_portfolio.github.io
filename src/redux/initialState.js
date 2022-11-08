@@ -42,7 +42,7 @@ const initialState = {
     {
       siteName: "Tickets ordering",
       urlSite: "https://order-tickets-express-scv.herokuapp.com/",
-      imagePath: `${process.env.PUBLIC_URL}/images/order-tickets-img.png`,
+      imagePath: `${process.env.PUBLIC_URL}/images/order-tickets.png`,
 
       description:
         "You can watch for free seats and order a tickets for concerts. Availability of seats is displayed live so you're always up to date!'",
